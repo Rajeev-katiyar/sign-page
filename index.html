@@ -1,0 +1,93 @@
+{% extends "base.html"%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4c0d3b394a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="/static/js/signcap1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="background-signup">
+    
+    <div class="container-signup">  <!-- main container-->
+        <div class="item-signup">
+           <h2 class="logo-signup">Engineer <span>Bhaiya</span></h2>
+        <div class="text-item-signup">
+            <h2>Welcome! <br><span>
+                To Our Traval & Trips
+            </span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus?</p>
+            <div class="social-icon-signup">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+        </div>
+        <div class="signup-section">
+            <form class="singup-form" method="post">
+                {% csrf_token %}
+                <div class="signa">
+                <label for="first_name">First name </label>
+                <input type="text" name="first_name" value="" placeholder="Enter the first name " required/>
+                <label for="last_name">Last name </label>
+                <input type="text" name="last_name" value="" placeholder="Enter the last name " required/><br>
+                </div>
+                <div class="signage">
+                <label for="age">age</label>
+                <input type="number" min="16" max="50" name="age" value="">
+                <label for="gender" id="signgen">gender</label>
+                <input type="radio"  name="gender" value="m"><label for="man" id="signman"id="signman">male
+                </label>
+                <input type="radio" name="gender" value="f"><label for="female" id="signfemale">famale</label><br>
+                </div>
+                <div class="signemail">
+                <label for="email">Email</label>
+                <input type="Email" name="email" value="" placeholder="enter the email "  required/><br>
+                </div>
+                <div class="signpass">
+                <label for="password">Paasword</label>
+                <input type="password" name="password" value="" placeholder="enter the password" required/>
+                </div>
+                <div class="resignpass">
+                <label for="re-password ">re-password</label>
+                <input type="password" name="re_password" value=""placeholder="Re-enter the password" required/><br>
+                </div>
+                <div class="signcap">
+                <label>chaptcha</label>
+                <input type="text" name="" value="" id="first" maxlength="1"  autofocus="">
+                <input type="text" name="" value="" id="second"  maxlength="1">
+                <input type="text" name="" value="" id="third"  maxlength="1">
+                <input type="text" name="" value="" id="fourth"  maxlength="1"><br>
+                </div>
+                <div class="signcheck">
+                <input type="checkbox" name="terms" id="terms" required  >I accept the Term of Use & Privacy Policy
+                </div><br>
+                <div class="signbutton">
+                <button type="submit" name=""><label>Sign up</label> </button><br>
+                <button><i class="fa-brands fa-square-google-plus"></i><label>Sign up with</label> <a href="#"><b>Google</b></a></button><br>
+                <button><i class="fa-brands fa-square-facebook"></i><label>Sign up with</label> <a href="#"><b>Facebook</b></a></button><br>
+                <button><i class="fa-regular fa-envelope-circle-check"></i><label>Sign up with</label> <a href="#"><b>Email</b></a></button><br>
+                </div>
+                <div class="signall">
+                <label>Aleady have an account?<a href="http://127.0.0.1:8000/login" >Log In</a></label>
+                </div>
+
+
+
+
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{%endblock%}
